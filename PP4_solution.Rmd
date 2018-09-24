@@ -1,0 +1,31 @@
+
+--------------------
+Title: Solution for Problem 4 given below, 
+
+How will you modify the model if there is a fixed cost of $1,000 for each month that there is production? This cost is assumed only if there is production different from zero in that month.
+----------------------
+
+
+```{r}
+library("lpSolveAPI")
+x <- read.lp("PP4_Constraints.lp")
+x
+
+```
+
+now, solve the problem
+```{r}
+solve(x)
+get.objective(x)
+
+```
+get variables and contranints 
+```{r}
+get.constraints(x)
+```
+
+get variables
+```{r}
+get.variables(x)
+```
+

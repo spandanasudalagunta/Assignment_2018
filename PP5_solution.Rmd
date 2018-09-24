@@ -1,0 +1,24 @@
+---
+title: Solution for Problem 5 given below,
+For the next four months, the supplier of raw materials has made an special offer: all units purchased above 150 in any given month will have a discounts of $2. For instance, if a purchase of 350 units is ordered in month 1, the first 150 units will be sold for $12 each, and the following 200 will be sold for $10 each. Modify the original formulation and solve.
+output: html_notebook
+---
+```{r}
+library("lpSolveAPI")
+x <- read.lp("PP5_Constraints.lp")
+x
+```
+now, solve the problem
+```{r}
+solve(x)
+get.objective(x)
+```
+get variables and contranints
+```{r}
+get.constraints(x)
+```
+get variables
+```{r}
+get.variables(x)
+```
+
